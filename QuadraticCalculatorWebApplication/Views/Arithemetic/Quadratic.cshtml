@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Quadratic Calculator";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Enter the value of the variables</h1>
+    <div>
+        <form asp-controller="Arithemetic" asp-action="Quadratic" method="post">
+            <input placeholder="Enter value of a" type="number" name="firstVariables" required />
+            <input placeholder="Enter value of b" type="number" name="secondVariables" required />
+            <input placeholder="Enter value of c" type="number" name="thirdVariables" required />
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+    
+   @{ 
+       if(ViewBag.Result != null)
+       {
+           <div>
+                 <p>@ViewBag.Result</p>
+           </div>
+                    
+       }
+    } 
+</div>
+
